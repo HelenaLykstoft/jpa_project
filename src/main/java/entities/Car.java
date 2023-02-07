@@ -25,6 +25,10 @@ public class Car {
         this.year = year;
     }
 
+    public Car() {
+
+    }
+
     public Set<Person> getPersons() {
         return persons;
     }

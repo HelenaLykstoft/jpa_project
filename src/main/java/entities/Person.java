@@ -3,6 +3,7 @@ package entities;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashSet;
 import java.util.Objects;
@@ -31,9 +32,25 @@ public class Person {
 //    @Temporal(TemporalType.TIMESTAMP) // Not needed, but its good to be explicit
     private LocalDateTime birthdate;
 
+    @Column(name ="created", updatable = false)
+    private LocalDateTime created;
 
+    @Column (name = "modified")
+    private LocalDateTime editted;
 
-    @OneToMany(mappedBy = "person", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @PreUpdate
+    public void onUpdate(){
+        editted = LocalDateTime.now(ZoneId.of("GMT+02:00"));
+    }
+
+    @PrePersist
+    public void onPersist(){
+        editted = LocalDateTime.now(ZoneId.of("GMT+02:00"));
+        created = LocalDateTime.now(ZoneId.of("GMT+02:00"));
+
+    }
+
+    @OneToMany(mappedBy = "person", orphanRemoval = true, cascade = CascadeType.ALL)
     private Set<Phone> phones = new LinkedHashSet<>();
 
     @ManyToMany
