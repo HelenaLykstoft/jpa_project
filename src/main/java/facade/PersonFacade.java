@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 public class PersonFacade {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
+    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
 
     // Creates a person
     public Person createPerson(Person p) {
@@ -105,5 +105,14 @@ public class PersonFacade {
 //        System.out.println("Delete person with ID 2");
 //        pf.deletePerson(2L);
         pf.getAllPersons().forEach((person)-> System.out.println(person));
+
+        // Delete stuff, but cant delete because of foreign keys
+//        EntityManager em = emf.createEntityManager();
+//        em.getTransaction().begin();
+//        TypedQuery<Person> tp = em.createNamedQuery("Person.deleteById",Person.class);
+//        tp.setParameter("id",1L);
+//        tp.executeUpdate();
+//        em.getTransaction().commit();
+//        em.close();
     }
 }

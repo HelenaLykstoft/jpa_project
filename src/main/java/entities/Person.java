@@ -11,6 +11,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "person")
+@NamedQueries({
+        @NamedQuery(name = "Person.deleteById", query = "delete from Person p where p.id = :id")
+})
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,6 +52,8 @@ public class Person {
         created = LocalDateTime.now(ZoneId.of("GMT+02:00"));
 
     }
+
+
 
     @OneToMany(mappedBy = "person", orphanRemoval = true, cascade = CascadeType.ALL)
     private Set<Phone> phones = new LinkedHashSet<>();
