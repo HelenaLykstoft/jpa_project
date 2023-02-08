@@ -85,6 +85,8 @@ public class PersonFacade implements iSelector{
 
     @Override
     public Set<Person> getPeopleAboveAvgAge() {
+//        EntityManager em = emf.createEntityManager();
+//        em.createQuery("SELECT p FROM Person p WHERE p.age > (SELECT AVG(p.age ) FROM Person p)",Person.class));
         return null;
     }
 
