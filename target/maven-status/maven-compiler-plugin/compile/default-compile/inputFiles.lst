@@ -1,4 +1,9 @@
 C:\Users\Helen\jpa_demo_day1\src\main\java\dk\cphbusiness\jpa_demo_day1\HelloResource.java
 C:\Users\Helen\jpa_demo_day1\src\main\java\entities\Person.java
 C:\Users\Helen\jpa_demo_day1\src\main\java\dk\cphbusiness\jpa_demo_day1\HelloApplication.java
+C:\Users\Helen\jpa_demo_day1\src\main\java\facade\PersonMapper.java
+C:\Users\Helen\jpa_demo_day1\src\main\java\facade\iSelector.java
+C:\Users\Helen\jpa_demo_day1\src\main\java\entities\Phone.java
 C:\Users\Helen\jpa_demo_day1\src\main\java\facade\PersonFacade.java
+C:\Users\Helen\jpa_demo_day1\src\main\java\entities\Partner.java
+C:\Users\Helen\jpa_demo_day1\src\main\java\entities\Car.java

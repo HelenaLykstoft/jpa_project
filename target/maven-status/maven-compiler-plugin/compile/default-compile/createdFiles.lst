@@ -1,2 +1,5 @@
+entities\Partner.class
+facade\PersonMapper.class
+facade\iSelector.class
 entities\Phone.class
 entities\Car.class

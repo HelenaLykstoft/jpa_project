@@ -15,7 +15,6 @@ public class Car {
     private String model;
     private int year;
 
-
     @ManyToMany(mappedBy = "cars")
     private Set<Person> persons = new LinkedHashSet<>();
 
