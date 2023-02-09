@@ -27,6 +27,7 @@ public class PersonFacade implements iSelector{
         Person person = PersonMapper.createPerson(p);
         Car car1 = new Car("Alfa","Romeo",2010);
         PersonMapper.addCarToPerson(person,car1);
+        System.out.println(p.getPartner(p));
 //        System.out.println("The person got this new id: " + p.getId());
 
         // Gets all persons from table

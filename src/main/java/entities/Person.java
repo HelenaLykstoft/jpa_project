@@ -182,19 +182,27 @@ public class Person {
     }
 
     // * PARTNER
-
+    public Partner getPartner(Person person){
+        return partner;
+    }
 
 
 
     // ? TO STRING
+
+
     @Override
     public String toString() {
         return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", age=" + age +
-                ", addresses=" + addresses +
                 ", birthdate=" + birthdate +
+                ", addresses=" + addresses +
+                ", created=" + created +
+                ", editted=" + editted +
+                ", partner=" + partner +
+                ", phones=" + phones +
+                ", cars=" + cars +
                 '}';
     }
 }
